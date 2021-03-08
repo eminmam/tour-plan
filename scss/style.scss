@@ -1,9 +1,15 @@
+@import 'var';
 @import 'settings';
 
-@import 'var';
 //Стрили для блока header
 @import './blocks/header';
 
 @import 'normalize';
+
+
+@import './blocks/breadcrumb';
+
+@import './blocks/hotel';
+
 //Полключение стилей для адаптива
-@import 'media'
+@import 'media';
