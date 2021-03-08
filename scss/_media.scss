@@ -8,16 +8,24 @@
   .container {
     max-width: 700px;
   }
+
+  .logo {
+    width: 132px;
+  }
+
   .navbar {
     &-top {
       padding: 30px 0;
     }
+
     &-bottom {
       padding: 22px 0;
     }
+
     &__search {
       margin-left: auto;
     }
+
     &-menu {
       &__link {
         font-size: 12px;
@@ -25,12 +33,51 @@
       }
     }
   }
+  .search {
+    &__input {
+      width: 340px;
+    }
+  }
 }
 
 @media (max-width: 768px) {
   .container {
-  max-width: 700px;
-  width: 92%;
+    max-width: 576px;
+    width: 92%;
   }
 
+  .navbar {
+
+    &__search,
+    &-bottom,
+    &__user {
+      display: none;
+    }
+  }
+  .menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 11px;
+    width: 16px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    
+
+    &__line {
+      width: 16px;
+      height: 1px;
+      background-color: $text-color;
+    }
+  }
 }
+
+@media (max-width: 576px) {
+  .logo {
+    width: 99px;
+  }
+}
+
+
