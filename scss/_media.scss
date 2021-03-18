@@ -3,8 +3,11 @@
     max-width: 960px;
   }
 
-  .slider {
-    width: 590px;
+  .hotel {
+    &__slider {
+      width: 590px;
+  }
+  
   }
 }
 
@@ -43,10 +46,7 @@
     }
   }
 
-  .slider {
-    width: 100%;
-    margin-bottom: 30px;
-  }
+  
 
   .hotel {
     &-grid {
@@ -55,6 +55,10 @@
 
     &-right {
       flex-direction: row;
+    }
+    &__slider {
+      width: 100%;
+      margin-bottom: 30px;
     }
   }
   .booking {
