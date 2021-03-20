@@ -1077,6 +1077,9 @@ template {
   .map {
     width: 340px;
   }
+  .reviews-slider__item {
+    max-width: 580px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1167,13 +1170,42 @@ template {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .reviews__title {
+    font-size: 18px;
+    line-height: 23px;
+    max-width: 245px;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .reviews-slider__item {
+    max-width: 580px;
+    padding: 0 30px 30px;
+  }
+  .reviews-slider__item:after, .reviews-slider__item:before {
+    display: none;
+  }
+  .reviews-slider__button {
+    top: 30px;
+  }
+  .reviews-slider__button--prev {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin-left: -90px;
+  }
+  .reviews-slider__button--next {
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    margin-right: -90px;
+  }
 }
 
 @media (max-width: 576px) {
   .logo {
     width: 99px;
   }
-  .slider {
+  .hotel-slider {
     height: 250px;
   }
   .hotel__slider {
