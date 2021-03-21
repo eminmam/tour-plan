@@ -14,10 +14,18 @@
     height: 230px;
   }
 
+  .footer {
+    &__input {
+      flex-basis: 100%;
+    }
+  }
+
 }
 
 @media (max-width: 992px) {
-  .container, .newsletter-wrapper {
+
+  .container,
+  .newsletter-wrapper {
     max-width: 700px;
   }
 
@@ -45,13 +53,14 @@
       }
     }
   }
+
   .search {
     &__input {
       width: 340px;
     }
   }
 
-  
+
 
   .hotel {
     &-grid {
@@ -61,14 +70,17 @@
     &-right {
       flex-direction: row;
     }
+
     &__slider {
       width: 100%;
       margin-bottom: 30px;
     }
   }
+
   .booking {
     width: 340px;
   }
+
   .map {
     width: 340px;
   }
@@ -80,17 +92,65 @@
       }
     }
   }
+
   .activities {
     &-wrapper {
       flex-wrap: wrap;
     }
+
     &__card {
       margin-bottom: 20px;
     }
   }
+
   .card {
     width: 340px;
     height: 255px;
+  }
+
+  .footer {
+    &-wrapper {
+      grid-template-columns: repeat(6, 1fr );
+      grid-row-gap: 40px;
+    }
+    &__input {
+      flex-basis: 49%;
+    }
+
+    &__logo {
+      grid-column: span 2;
+      grid-row: 1/2;
+    }
+
+    &__social {
+      &-network {
+        grid-row: 1/2;
+        grid-column: span 4;
+        align-self: center;
+      }
+    }
+    &__additional {
+      grid-column: span 2;
+    }
+    &__categories {
+      grid-column: span 2;
+      grid-row: 2/3;
+    }
+    &__legal {
+      grid-column: span 2;
+    }
+
+    &__contact {
+      &-details {
+        grid-column: span 5;
+        grid-row: 3/4;
+      }
+
+      &-form {
+        grid-row: 4;
+        grid-column: span 5;
+      }
+    }
   }
 }
 
@@ -108,6 +168,7 @@
       display: none;
     }
   }
+
   .menu-button {
     display: flex;
     align-items: center;
@@ -118,48 +179,60 @@
     border: none;
     cursor: pointer;
     padding: 0;
+
     &__line {
       width: 16px;
       height: 1px;
       background-color: $text-color;
     }
   }
+
   .stars {
     flex-basis: auto;
   }
+
   .hotel {
     &-name {
       flex-basis: 100%;
     }
+
     &-wrapper {
       justify-content: space-between;
     }
+
     &-info {
       &__rating {
         display: none;
       }
+
       &__offer {
         order: -1;
         margin-left: 0;
       }
+
       &__text {
         width: 100%;
       }
+
       &__name {
         margin-top: 10px;
       }
     }
+
     &-right {
       flex-direction: column;
       min-height: 450px;
     }
   }
+
   .booking {
     width: 100%;
   }
+
   .map {
     width: 100%;
   }
+
   .slider {
     height: 350px;
   }
@@ -172,6 +245,7 @@
       align-items: flex-start;
     }
   }
+
   .reviews {
     &__title {
       font-size: 18px;
@@ -180,16 +254,21 @@
       margin: auto;
       margin-bottom: 40px;
     }
+
     &-slider {
       &__item {
         max-width: 580px;
         padding: 0 30px 30px;
-        &:after, &:before {
+
+        &:after,
+        &:before {
           display: none;
         }
       }
+
       &__button {
         top: 30px;
+
         &--prev {
           left: 50%;
           transform: translateX(-50%);
@@ -204,13 +283,23 @@
       }
     }
   }
+
   .activities {
     padding-top: 40px;
     padding-bottom: 60px;
   }
+
   .card {
     width: 49%;
     height: 255px;
+  }
+  .footer {
+    &__contact-form {
+      grid-column: span 6;
+    }
+    &__input {
+      flex-basis: 49%;
+    }
   }
 }
 
@@ -218,23 +307,68 @@
   .logo {
     width: 99px;
   }
+
   .hotel {
     &-slider {
       height: 250px;
     }
+
     &__slider {
       margin-bottom: 20px;
     }
   }
+
   .newsletter {
     &__title {
       margin-bottom: 37px;
     }
   }
+
   .card {
     width: 100%;
   }
- 
+
+  .footer {
+    &__input {
+      flex-basis: 100%;
+    }
+    &-wrapper {
+      grid-template-columns: 1fr;
+    }
+    &__logo {
+      grid-row: 1;
+      grid-column: 1;
+    }
+    &__social {
+      &-network {
+        grid-row: 2;
+        grid-column: 1;
+      }
+    }
+    &__legal {
+      grid-row: 3;
+      grid-column: 1;
+    }
+    &__additional {
+      grid-row: 4;
+      grid-column: 1;
+    }
+    &__categories {
+      grid-row: 5;
+      grid-column: 1;
+    }
+    &__contact {
+      &-details {
+          grid-row: 6;
+          grid-column: 1;
+      }
+      &-form {
+        grid-row: 7;
+        grid-column: 1;
+      }
+    }
+  }
+
 }
 
 
@@ -249,17 +383,18 @@
       font-weight: 300;
       font-size: 20px;
       line-height: 25px;
+
       &__strong {
         font-weight: 600;
         font-size: 30px;
         line-height: 38px;
       }
     }
+
     &__title {
       margin-bottom: 37px;
     }
   }
-  
-  
-}
 
+
+}
