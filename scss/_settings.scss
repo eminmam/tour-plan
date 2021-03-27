@@ -45,3 +45,8 @@ img {
   line-height: 15px;
   cursor: pointer;
 }
+
+.invalid {
+  color: $primary;
+  border-bottom: 1px solid $primary;
+}

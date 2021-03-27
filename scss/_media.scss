@@ -16,7 +16,9 @@
 
   .footer {
     &__input {
-      flex-basis: 100%;
+      &-group {
+        flex-basis: 100%;
+      }
     }
   }
 
@@ -114,7 +116,9 @@
       grid-row-gap: 40px;
     }
     &__input {
-      flex-basis: 49%;
+      &-group {
+        flex-basis: 49%;
+      }
     }
 
     &__logo {
@@ -331,7 +335,9 @@
       grid-column: span 6;
     }
     &__input {
-      flex-basis: 49%;
+      &-group {
+        flex-basis: 49%;
+      }
     }
   }
 }
@@ -363,7 +369,9 @@
 
   .footer {
     &__input {
-      flex-basis: 100%;
+      &-group {
+        flex-basis: 100%;
+      }
     }
     &-wrapper {
       grid-template-columns: 1fr;

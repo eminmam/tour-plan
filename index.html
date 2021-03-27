@@ -24,7 +24,7 @@
         </a>
 
         <form action="#" class="search navbar__search navbar__search--mobile_hidden">
-          <input type="text" class="search__input" placeholder="Search Location"></input>
+          <input type="text" class="search__input" placeholder="Search Location">
           <button class="search__button">
             <img src="./img/search.svg" alt="Icon: Search">
           </button>
@@ -58,7 +58,7 @@
           </li>
           <li class="navbar-menu__item navbar-menu__item--mobile_visible">
             <form action="#" class="search navbar__search navbar__search--mobile_visible">
-              <input type="text" class="search__input" placeholder="Search Location"></input>
+              <input type="text" class="search__input" placeholder="Search Location">
               <button class="search__button">
                 <img src="./img/search.svg" alt="Icon: Search">
               </button>
@@ -193,12 +193,13 @@
               <span class="booking__heading">Quick Booking</span>
 
               <a href="tel:12100" class="booking__number">
-                <img src="./img/phone-call.svg" alt="Icon: Call" lass="booking__image">
+                <img src="./img/phone-call.svg" alt="Icon: Call" class="booking__image">
                 <span class="booking__numbers">12100</span>
               </a>
             </div>
             <!-- /.call-center -->
-            <button data-toggle="modal" data-href="#booking-modal" class="button booking__button">View Other Options</button>
+            <button data-toggle="modal" data-href="#booking-modal" class="button booking__button">View Other
+              Options</button>
           </div>
           <!-- /.booking -->
           <div class="map">
@@ -223,7 +224,7 @@
       </h2>
 
       <form action="./send.php" method="post" class="subscribe newsletter__subscribe">
-        <input type="text" class="subscribe__input" placeholder="Your email address" name="mail"></input>
+        <input type="text" class="subscribe__input" placeholder="Your email address" name="mail">
         <button class="subscribe__button">
           Send
         </button>
@@ -415,9 +416,16 @@
         <!-- /.footer__contact-details -->
         <div class="footer__contact-form">
           <h3 class="footer__title footer__title--mb3">Send us a message</h3>
-          <form action="./send.php" method="POST" class="footer__form">
-            <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
-            <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
+          <form action="./send.php" method="POST" class="footer__form form">
+            <div class="footer__input-group">
+              <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required>
+            </div>
+            <!-- /.footer__input-group -->
+            <div class="footer__input-group">
+              <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone" required>
+            </div>
+            <!-- /.footer__input-group -->
+            
             <textarea cols="30" rows="10" class="message footer__message" placeholder="Message"
               name="message"></textarea>
             <button class="button footer__button">Send</button>
@@ -430,8 +438,7 @@
     </div>
     <!-- /.container -->
   </footer>
-
-  <div class="modal" id="booking-modal">
+  <div class="modal" id="rating-modal">
     <div class="modal__overlay"></div>
     <!-- /.modal__overlay -->
     <div class="modal__dialog">
@@ -439,10 +446,10 @@
         <img src="./img/close.svg" alt="Icon: Close">
       </a>
       <div class="modal__contact-form">
-        <h3 class="modal__title modal__title--mb3">Send us a message</h3>
-        <form action="./send.php" method="POST" class="modal__form">
-          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name">
-          <input type="text" class="input modal__input" placeholder="Phone Number*" name="phone">
+        <h3 class="modal__title modal__title--mb3">Send a feedback</h3>
+        <form action="./send.php" method="POST" class="modal__form form">
+          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required>
+          <input type="text" class="input modal__input" placeholder="Phone Number*" name="phone" required>
           <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
           <button class="button modal__button">Send</button>
           <span class="modal__info">* Required Fields</span>
@@ -453,7 +460,7 @@
     <!-- /.modal__dialog -->
   </div>
   <!-- /.modal -->
-  <div class="modal" id="rating-modal">
+  <div class="modal" id="booking-modal">
     <div class="modal__overlay"></div>
     <!-- /.modal__overlay -->
     <div class="modal__dialog">
@@ -461,10 +468,11 @@
         <img src="./img/close.svg" alt="Icon: Close">
       </a>
       <div class="modal__contact-form">
-        <h3 class="modal__title modal__title--mb3">Send a feedback</h3>
-        <form action="./send.php" method="POST" class="modal__form">
-          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name">
-          <input type="text" class="input modal__input" placeholder="Phone Number*" name="phone">
+        <h3 class="modal__title modal__title--mb3">Send us a message</h3>
+        <form action="./send.php" method="POST" class="modal__form form booking-form">
+          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name"  minlength="2" required>
+          <input type="text" class="input modal__input" placeholder="Phone Number*" name="phone" required>
+          <input type="text" class="input modal__input" placeholder="Your Email*" name="email" required>
           <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
           <button class="button modal__button">Send</button>
           <span class="modal__info">* Required Fields</span>
@@ -478,6 +486,7 @@
 
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/jquery.validate.min.js"></script>
   <script src="./js/main.js"></script>
 </body>
 
